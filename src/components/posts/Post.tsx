@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ContactProps, PostPartialProps } from "../common/types";
-import Comments from "./Comments";
+import Comments from "./comments/Comments";
 import PostHeader from "./PostHeader";
 import { mockContact } from "../common/mock";
 

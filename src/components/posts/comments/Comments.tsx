@@ -1,5 +1,5 @@
-import CommentList from "../CommentListmmentList";
-import CreateComment from "../CreateCommentteComment";
+import CommentList from "./CommentList";
+import CreateComment from "./CreateComment";
 
 export default function Comments() {
   return (
