@@ -4,7 +4,12 @@ import Comments from "./comments/Comments";
 import PostHeader from "./PostHeader";
 import { mockContact } from "../common/mock";
 
-export default function Post({ title, content, contactId }: PostPartialProps) {
+export default function Post({
+  title,
+  content,
+  contactId,
+  id,
+}: PostPartialProps) {
   const [contact, setContact] = useState(mockContact);
 
   useEffect(() => {
@@ -19,7 +24,7 @@ export default function Post({ title, content, contactId }: PostPartialProps) {
 
       <p className="text-gray-700 mb-4">{content}</p>
 
-      <Comments />
+      <Comments postId={id} contact={contact} />
     </div>
   );
 }

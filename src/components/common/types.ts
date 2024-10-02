@@ -24,3 +24,15 @@ export type PostHeaderProps = {
   contact: ContactProps;
   title: string;
 };
+
+export type CommentsProps = {
+  postId: number;
+  contact: ContactProps;
+};
+
+export type CommentProps = {
+  id: number;
+  postId: number;
+  contactId: number;
+  content: string;
+};
