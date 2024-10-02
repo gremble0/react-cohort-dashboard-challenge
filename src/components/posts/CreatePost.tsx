@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Avatar from "./Avatar";
+import Avatar from "../common/Avatar";
 
 export default function CreatePost() {
   const [postContent, setPostContent] = useState("");

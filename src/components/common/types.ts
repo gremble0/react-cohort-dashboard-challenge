@@ -10,12 +10,17 @@ export type ContactProps = {
   longitude: number;
   favouriteColour: string;
   profileImage: string;
-  id: string;
+  id: number;
 };
 
-export type PostProps = {
+export type PostPartialProps = {
   title: string;
   content: string;
   id: number;
   contactId: number;
+};
+
+export type PostHeaderProps = {
+  contact: ContactProps;
+  title: string;
 };

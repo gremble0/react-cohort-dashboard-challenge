@@ -1,5 +1,5 @@
 import { Logo } from "../assets/svgs";
-import Avatar from "./Avatar";
+import Avatar from "./common/Avatar";
 
 export default function Header() {
   return (
