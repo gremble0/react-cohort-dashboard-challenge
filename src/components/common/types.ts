@@ -27,7 +27,6 @@ export type PostHeaderProps = {
 
 export type CommentsProps = {
   postId: number;
-  contact: ContactProps;
 };
 
 export type CommentProps = {

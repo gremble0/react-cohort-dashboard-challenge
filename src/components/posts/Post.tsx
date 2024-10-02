@@ -24,7 +24,7 @@ export default function Post({
 
       <p className="text-gray-700 mb-4">{content}</p>
 
-      <Comments postId={id} contact={contact} />
+      <Comments postId={id} />
     </div>
   );
 }
