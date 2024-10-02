@@ -35,3 +35,7 @@ export type CommentProps = {
   contactId: number;
   content: string;
 };
+
+export type AvatarProps = {
+  imgSrc: string;
+};

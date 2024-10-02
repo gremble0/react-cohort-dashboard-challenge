@@ -14,10 +14,9 @@ export default function Comment(props: CommentProps) {
       .then((body: ContactProps) => setContact(body));
   }, []);
 
-  // TODO: see previous comments instead of loading all
   return (
-    <div key={props.id} className="flex items-start space-x-3">
-      <Avatar />
+    <div className="flex items-start space-x-3">
+      <Avatar imgSrc={contact.profileImage} />
 
       <div className="bg-[#dfe7f4] rounded-lg p-3 w-full">
         <h4 className="text-sm font-bold text-[#00235b]">

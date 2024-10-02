@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="flex bg-[#000046]">
       <Logo />
-      <Avatar />
+      <Avatar imgSrc="" />
     </div>
   );
 }

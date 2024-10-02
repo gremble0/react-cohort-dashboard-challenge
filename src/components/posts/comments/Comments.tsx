@@ -19,7 +19,7 @@ export default function Comments({ postId }: CommentsProps) {
     <>
       <div className="flex flex-col space-y-4 p-4 rounded-lg">
         {comments.map((comment) => (
-          <Comment {...comment} />
+          <Comment {...comment} key={comment.id} />
         ))}
       </div>
 

@@ -20,7 +20,7 @@ export default function CreatePostForm() {
       />
       <button
         type="submit"
-        className="ml-4 bg-[#000046] text-white px-4 py-2 rounded-md hover:bg-indigo-900 focus:outline-black"
+        className="ml-4 bg-[#000046] text-white px-14 py-3 rounded-md hover:bg-indigo-900 focus:outline-black"
       >
         Post
       </button>

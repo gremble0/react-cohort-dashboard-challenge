@@ -1,11 +1,10 @@
+import Avatar from "../../common/Avatar";
+
 export default function CreateComment() {
   return (
     <div className="flex items-center border-t border-gray-200 pt-4">
-      <div className="flex-shrink-0">
-        <div className="bg-green-500 h-8 w-8 rounded-full flex items-center justify-center text-white font-bold">
-          AW
-        </div>
-      </div>
+      <Avatar imgSrc="" />
+
       <div className="ml-4 w-full">
         <input
           type="text"
@@ -13,6 +12,7 @@ export default function CreateComment() {
           className="w-full bg-gray-100 p-2 rounded-lg outline-none"
         />
       </div>
+
       <button className="ml-2 text-blue-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
