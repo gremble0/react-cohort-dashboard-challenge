@@ -1,3 +1,11 @@
+import CreatePost from "./CreatePost";
+import Posts from "./Posts";
+
 export default function Body() {
-  return <p>yo</p>;
+  return (
+    <>
+      <CreatePost />
+      <Posts />
+    </>
+  );
 }
