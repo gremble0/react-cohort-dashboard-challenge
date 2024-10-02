@@ -1,11 +1,11 @@
 import NavBar from "./NavBar";
-import PostsWithCreatePost from "./PostsWithCreatePost";
+import Posts from "./Posts";
 
 export default function Body() {
   return (
     <div className="flex">
       <NavBar />
-      <PostsWithCreatePost />
+      <Posts />
     </div>
   );
 }
