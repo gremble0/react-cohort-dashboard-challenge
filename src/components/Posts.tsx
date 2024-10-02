@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import Post, { PostProps } from "./Post";
+import Post from "./Post";
 import CreatePost from "./CreatePost";
+import { PostProps } from "../types";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);

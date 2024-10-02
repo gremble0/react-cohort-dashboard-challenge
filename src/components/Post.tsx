@@ -1,19 +1,28 @@
+import { useEffect, useState } from "react";
+import { ContactProps, PostProps } from "../types";
 import Avatar from "./Avatar";
 
-export type PostProps = {
-  title: string;
-  content: string;
-  id: number;
-};
+export default function Post({ title, content, contactId }: PostProps) {
+  const [contact, setContact] = useState<ContactProps | null>(null);
 
-export default function Post({ title, content }: PostProps) {
+  useEffect(() => {
+    fetch("https://boolean-uk-api-server.fly.dev/hermagst/contact/" + contactId)
+      .then((res) => res.json())
+      .then((body) => {
+        console.log(body);
+        setContact(body);
+      });
+  }, []);
+
   return (
     <div className="bg-white rounded-lg shadow p-6 max-w-lg">
-      {/* Author Info */}
+      {/* Contact Info */}
       <div className="flex items-center mb-4">
         <Avatar />
         <div className="ml-4">
-          <h2 className="text-lg font-bold text-gray-900">{"author"}</h2>
+          <h2 className="text-lg font-bold text-gray-900">
+            {contact && `${contact.firstName} ${contact.lastName}`}
+          </h2>
           <h3 className="text-sm text-gray-400">{title}</h3>
         </div>
       </div>
