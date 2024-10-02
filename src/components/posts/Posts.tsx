@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import CreatePost from "./CreatePost";
-import { ContactProps, PostBodyProps, PostPartialProps } from "../common/types";
+import { PostPartialProps } from "../common/types";
 import Post from "./Post";
-import { mockPost } from "../common/mock";
 
 export default function Posts() {
-  const [posts, setPosts] = useState<PostBodyProps[]>([]);
+  const [posts, setPosts] = useState<PostPartialProps[]>([]);
 
   useEffect(() => {
     fetch("https://boolean-uk-api-server.fly.dev/hermagst/post")
       .then((res) => res.json())
-      .then((body: PostBodyProps[]) => setPosts(body));
+      .then((body: PostPartialProps[]) => setPosts(body));
   }, []);
 
   return (

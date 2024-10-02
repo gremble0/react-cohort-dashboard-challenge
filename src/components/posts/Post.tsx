@@ -6,6 +6,7 @@ import { mockContact } from "../common/mock";
 
 export default function Post({ title, content, contactId }: PostPartialProps) {
   const [contact, setContact] = useState(mockContact);
+
   useEffect(() => {
     fetch(`https://boolean-uk-api-server.fly.dev/hermagst/contact/${contactId}`)
       .then((res) => res.json())
