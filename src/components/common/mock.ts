@@ -1,7 +1,7 @@
 import { ContactProps } from "./types";
 
 export const mockContact: ContactProps = {
-  id: 0,
+  id: 1,
   city: "loading...",
   email: "loading...",
   gender: "loading...",

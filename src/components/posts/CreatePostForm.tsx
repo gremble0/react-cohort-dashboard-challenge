@@ -1,10 +1,28 @@
 import React, { useState } from "react";
+import { CreatePostProps, PostPartialProps } from "../common/types";
 
-export default function CreatePostForm() {
+export default function CreatePostForm({ posts, setPosts }: CreatePostProps) {
   const [postContent, setPostContent] = useState("");
 
   const createPost = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    fetch("https://boolean-uk-api-server.fly.dev/hermagst/post", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: "no title",
+        content: postContent,
+        contactId: 1,
+      }),
+    })
+      .then((res) => res.json())
+      .then((body: PostPartialProps) => {
+        setPosts([...posts, body]);
+        setPostContent("");
+      });
   };
 
   return (

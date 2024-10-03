@@ -45,3 +45,8 @@ export type CommentProps = {
 export type AvatarProps = {
   imgSrc: string;
 };
+
+export type CreatePostProps = {
+  posts: PostPartialProps[];
+  setPosts: React.Dispatch<React.SetStateAction<PostPartialProps[]>>;
+};

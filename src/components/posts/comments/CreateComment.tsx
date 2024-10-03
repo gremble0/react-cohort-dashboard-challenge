@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Avatar from "../../common/Avatar";
 import { CommentProps, CreateCommentProps } from "../../common/types";
+import { mockContact } from "../../common/mock";
 
 export default function CreateComment({
   postId,
@@ -35,7 +36,7 @@ export default function CreateComment({
 
   return (
     <div className="flex items-center border-t border-gray-200 pt-4">
-      <Avatar imgSrc="" />
+      <Avatar imgSrc={mockContact.profileImage} />
 
       <form className="ml-4 w-full flex" onSubmit={createComment}>
         <input

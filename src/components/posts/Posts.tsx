@@ -14,7 +14,7 @@ export default function Posts() {
 
   return (
     <div className="flex-none">
-      <CreatePost />
+      <CreatePost posts={posts} setPosts={setPosts} />
       <div className="flex flex-col space-y-4 mt-4">
         {posts.map((props: PostPartialProps) => (
           <Post {...props} key={props.id} />
