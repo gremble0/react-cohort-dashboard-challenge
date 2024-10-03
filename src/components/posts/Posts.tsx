@@ -13,10 +13,10 @@ export default function Posts() {
   }, []);
 
   return (
-    <div className="flex-none">
+    <div className="flex-none m-4">
       <CreatePost posts={posts} setPosts={setPosts} />
-      <div className="flex flex-col space-y-4 mt-4">
-        {posts.map((props: PostPartialProps) => (
+      <div className="flex flex-col space-y-4 mt-4 w-full">
+        {posts.map((props) => (
           <Post {...props} key={props.id} />
         ))}
       </div>

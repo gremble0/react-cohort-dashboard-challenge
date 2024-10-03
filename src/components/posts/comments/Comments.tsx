@@ -12,7 +12,7 @@ export default function Comments({ postId }: CommentsProps) {
     )
       .then((res) => res.json())
       .then((body: CommentProps[]) => setComments(body));
-  }, []);
+  }, [postId]);
 
   // TODO: see previous comments instead of loading all
   return (

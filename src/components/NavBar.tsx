@@ -1,21 +1,25 @@
+import { Link } from "react-router-dom";
+
 export default function NavBar() {
   return (
     <nav className="border-r border-gray-300 p-8 flex flex-col items-center space-y-6 bg-white">
-      <div className="flex flex-col items-center">
-        <svg
-          width="33"
-          height="36"
-          viewBox="0 0 33 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0.5 36V12L16.6 0L32.5 12V36H20.8V21.75H12.15V36H0.5Z"
-            fill="#64648C"
-          />
-        </svg>
-        <p className="text-sm mt-1">Home</p>
-      </div>
+      <Link to={"/"}>
+        <div className="flex flex-col items-center">
+          <svg
+            width="33"
+            height="36"
+            viewBox="0 0 33 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.5 36V12L16.6 0L32.5 12V36H20.8V21.75H12.15V36H0.5Z"
+              fill="#64648C"
+            />
+          </svg>
+          <p className="text-sm mt-1">Home</p>
+        </div>
+      </Link>
       <div className="flex flex-col items-center">
         <svg
           width="41"

@@ -12,7 +12,7 @@ export default function Comment(props: CommentProps) {
     )
       .then((res) => res.json())
       .then((body: ContactProps) => setContact(body));
-  }, []);
+  }, [props.id]);
 
   return (
     <div className="flex items-start space-x-3">

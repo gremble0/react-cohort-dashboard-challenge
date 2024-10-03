@@ -17,10 +17,10 @@ export default function Post({
     fetch(`https://boolean-uk-api-server.fly.dev/hermagst/contact/${contactId}`)
       .then((res) => res.json())
       .then((contact: ContactProps) => setContact(contact));
-  }, []);
+  }, [id]);
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 max-w-lg">
+    <div className="bg-white rounded-lg shadow p-6">
       <Link to={"post/" + id}>
         <PostHeader title={title} contact={contact} />
       </Link>
