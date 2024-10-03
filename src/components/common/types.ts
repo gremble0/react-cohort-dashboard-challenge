@@ -29,6 +29,12 @@ export type CommentsProps = {
   postId: number;
 };
 
+export type CreateCommentProps = {
+  postId: number;
+  comments: CommentProps[];
+  setComments: React.Dispatch<React.SetStateAction<CommentProps[]>>;
+};
+
 export type CommentProps = {
   id: number;
   postId: number;

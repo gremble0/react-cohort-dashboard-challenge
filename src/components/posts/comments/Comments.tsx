@@ -23,7 +23,11 @@ export default function Comments({ postId }: CommentsProps) {
         ))}
       </div>
 
-      <CreateComment />
+      <CreateComment
+        postId={postId}
+        setComments={setComments}
+        comments={comments}
+      />
     </>
   );
 }
