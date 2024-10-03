@@ -13,6 +13,10 @@ export type ContactProps = {
   id: number;
 };
 
+export type PostProps = {
+  id: number;
+};
+
 export type PostPartialProps = {
   title: string;
   content: string;
@@ -33,8 +37,6 @@ export type CommentsProps = {
 
 export type CreateCommentProps = {
   postId: number;
-  comments: CommentProps[];
-  setComments: React.Dispatch<React.SetStateAction<CommentProps[]>>;
 };
 
 export type CommentProps = {

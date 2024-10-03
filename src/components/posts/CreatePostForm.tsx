@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import { CreatePostProps, PostPartialProps } from "../common/types";
+import React, { useContext, useState } from "react";
+import { PostPartialProps } from "../common/types";
+import { PostsContext } from "./Posts";
 
-export default function CreatePostForm({ posts, setPosts }: CreatePostProps) {
+export default function CreatePostForm() {
+  const [posts, setPosts] = useContext(PostsContext);
   const [postContent, setPostContent] = useState("");
 
   const createPost = (e: React.FormEvent<HTMLFormElement>) => {

@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Avatar from "../../common/Avatar";
 import { CommentProps, CreateCommentProps } from "../../common/types";
 import { mockContact } from "../../common/mock";
+import { CommentsContext } from "./Comments";
 
-export default function CreateComment({
-  postId,
-  comments,
-  setComments,
-}: CreateCommentProps) {
+export default function CreateComment({ postId }: CreateCommentProps) {
+  const [comments, setComments] = useContext(CommentsContext);
   const [comment, setComment] = useState("");
 
   const createComment = (e: React.FormEvent<HTMLFormElement>) => {

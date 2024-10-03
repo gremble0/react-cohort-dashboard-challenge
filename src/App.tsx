@@ -5,7 +5,7 @@ import Posts from "./components/posts/Posts";
 import PostDetails from "./components/posts/PostDetails";
 import Profile from "./components/profiles/Profile";
 
-export default function App() {
+export function App() {
   return (
     <div className="flex flex-col h-screen">
       <Header />
