@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Posts from "./components/posts/Posts";
 import PostDetails from "./components/posts/PostDetails";
+import Profile from "./components/profiles/Profile";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Posts />} />
             <Route path="/post/:id" element={<PostDetails />} />
+            <Route path="/profile/:id" element={<Profile />} />
           </Routes>
         </main>
       </div>

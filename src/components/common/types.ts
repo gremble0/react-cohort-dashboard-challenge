@@ -23,6 +23,8 @@ export type PostPartialProps = {
 export type PostHeaderProps = {
   contact: ContactProps;
   title: string;
+  id: number;
+  contactId: number;
 };
 
 export type CommentsProps = {
