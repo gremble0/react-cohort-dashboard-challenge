@@ -3,6 +3,7 @@ import { ContactProps, PostPartialProps } from "../common/types";
 import Comments from "./comments/Comments";
 import PostHeader from "./PostHeader";
 import { mockContact } from "../common/mock";
+import { Link } from "react-router-dom";
 
 export default function Post({
   title,
@@ -20,7 +21,9 @@ export default function Post({
 
   return (
     <div className="bg-white rounded-lg shadow p-6 max-w-lg">
-      <PostHeader title={title} contact={contact} />
+      <Link to={"post/" + id}>
+        <PostHeader title={title} contact={contact} />
+      </Link>
 
       <p className="text-gray-700 mb-4">{content}</p>
 
